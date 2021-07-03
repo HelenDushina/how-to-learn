@@ -15,13 +15,17 @@
   background-color: #f2f2f2;
 }
 
-.logo__place_header {
+.logo {
+  width: 183px;
+  }
+
+.logo_place_header {
   width: 183px;
   height: 32px;
   position: absolute;
   top: 30px;
   left: 64px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__title {
@@ -29,9 +33,9 @@
   font-size: 102px;
   line-height: 96px;
   font-weight: bold;
-  z-index: 1;
   margin: 0px 0px 0px 64px;
-}
+  z-index: 2;
+ }
 
 .header__subtitle {
   width: 338px;
@@ -42,6 +46,7 @@
   line-height: 25px;
   font-weight: normal;
   margin: 0;
+  z-index: 2;
 }
 .header__link {
   color: #2f80ed;
@@ -68,6 +73,7 @@
   right: 0px;
   bottom: 0px;
   background-color: #2f80ed;
+  z-index: 0;
 }
 .description {
   display: flex;
@@ -115,7 +121,7 @@
   line-height: 34px;
   font-weight: normal;
 }
-.two-columns__paragraph_margin {
+.two-columns__paragraph:nth-last-of-type(2n){
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -134,7 +140,8 @@
 
 .section-title {
   width: 60%;
-  margin-bottom: 20px;
+  margin: 0px 0px 20px;
+
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
@@ -173,17 +180,18 @@
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+  margin: 0;
 }
 
 .table__text {
-  margin-top: 20px;
+  margin: 20px 0px 0px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-image: url("../images/feynman.png");
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -193,6 +201,7 @@
   position: relative;
   align-items: center;
   background-color: #f2f2f2;
+  box-sizing: border-box;
 }
 
 .feynman_title {
@@ -245,11 +254,13 @@
 .section-title_theme_dark {
   padding: 90px 0px 0px;
   color: white;
+  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
   padding: 20px 0px 0px;
   color: white;
+  z-index: 1;
 }
 
 .kaufman__triangle {
@@ -266,6 +277,7 @@
 
 .footer {
   min-height: 350px;
+  box-sizing: border-box;
   display: flex;
   position: relative;
   flex-direction: row;
@@ -291,10 +303,11 @@
   justify-content: space-between;
 }
 
-.logo__place_footer {
+.logo_place_footer {
   height: 35px;
-  width: 183px;
+
 }
+
 
 .footer__author {
   margin: 18px 0px;
@@ -302,6 +315,12 @@
   font-size: 18px;
   font-weight: normal;
   color: white;
+}
+
+.footer__list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .footer__column-heading {
