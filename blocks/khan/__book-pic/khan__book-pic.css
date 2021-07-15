@@ -3,4 +3,6 @@
   width: 608px;
   padding-right: 48px;
   box-sizing: border-box;
+  object-fit: none;
+  object-position: 0 0;
 }
